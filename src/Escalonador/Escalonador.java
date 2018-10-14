@@ -9,18 +9,20 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
+import Teste.Teste;
+
 public class Escalonador {
 	public static void main(String[] args) throws IOException {
-		FileReader arq = null;
-		BufferedReader buff = null;
-		String[] processos = lerProcessos(args);
+		FileReader arq = null; 
+		BufferedReader buff = null; 
+		String[] processos = lerProcessos(args); 
 		// Le o quantum e salva na var quantum
 		arq = new FileReader(args[args.length - 1]);
 		buff = new BufferedReader(arq);
 		int quantum = Integer.parseInt(buff.readLine());
 		buff.close();
 		arq.close();
-		PrintWriter writer = new PrintWriter("log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("log/log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
 		// Le e adiciona as prioridades e o quantum
 		arq = new FileReader(args[args.length - 2]);
 		buff = new BufferedReader(arq);
@@ -62,7 +64,7 @@ public class Escalonador {
 			desktop.open(file);
 	}
 
-	private static void runEscalonador(PriorityQueue<String[]> prontos, HashMap<String[], Integer> bloqueados,
+	public static void runEscalonador(PriorityQueue<String[]> prontos, HashMap<String[], Integer> bloqueados,
 			String[] executando, HashMap<String, Integer> registradores, String[] processos, PrintWriter writer,
 			int quantum2) {
 		HashMap<String, Integer> mediaDeTrocas = new HashMap<String, Integer>();
@@ -144,6 +146,8 @@ public class Escalonador {
 			int aux = mediaDeTrocas.get(keys[k]);
 			divisor += aux;
 		}
+		Teste.mediaTrocas= divisor / dividendo;
+		Teste.mediaInstrucoes = (double) instrucoesTotais / numeroDeQuanta;
 		writer.println("MEDIA DE TROCAS: " + divisor / dividendo);
 		writer.println("MEDIA DE INSTRUÇÕES: " + (double) instrucoesTotais / numeroDeQuanta);
 		return;
@@ -223,7 +227,7 @@ public class Escalonador {
 		return novo;
 	}
 
-	static String[] lerProcessos(String[] args) throws IOException {
+	public static String[] lerProcessos(String[] args) throws IOException {
 		FileReader arq = null;
 		BufferedReader buff = null;
 		String[] processos = new String[args.length - 2];
