@@ -1,0 +1,70 @@
+Carregando TESTE-3
+Carregando TESTE-5
+Carregando TESTE-7
+Carregando TESTE-2
+Carregando TESTE-4
+Carregando TESTE-8
+Carregando TESTE-9
+Carregando TESTE-10
+Carregando TESTE-6
+Carregando TESTE-1
+Interrompendo processo TESTE-3 após 3 instruções.
+E/S iniciada em TESTE-5
+Processo TESTE-5 após 2 instruções (havia um comando antes da E/S)
+Interrompendo processo TESTE-7 após 3 instruções.
+Interrompendo processo TESTE-2 após 3 instruções.
+Interrompendo processo TESTE-3 após 6 instruções.
+E/S iniciada em TESTE-4
+Processo TESTE-4 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-5
+Processo TESTE-5 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-7
+Processo TESTE-7 após 1 instrução (havia apenas a E/S)
+Interrompendo processo TESTE-8 após 3 instruções.
+E/S iniciada em TESTE-9
+Interrompendo processo TESTE-10 após 3 instruções.
+E/S iniciada em TESTE-2
+Processo TESTE-2 após 2 instruções (havia um comando antes da E/S)
+TESTE-3 terminado. X=4 Y=10
+E/S iniciada em TESTE-4
+Processo TESTE-4 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-5
+Processo TESTE-5 após 2 instruções (havia um comando antes da E/S)
+Interrompendo processo TESTE-6 após 3 instruções.
+E/S iniciada em TESTE-7
+Interrompendo processo TESTE-8 após 6 instruções.
+Interrompendo processo TESTE-9 após 6 instruções.
+Interrompendo processo TESTE-1 após 3 instruções.
+E/S iniciada em TESTE-10
+Processo TESTE-10 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-2
+E/S iniciada em TESTE-4
+Processo TESTE-4 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-5
+Processo TESTE-5 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-6
+Processo TESTE-6 após 1 instrução (havia apenas a E/S)
+TESTE-7 terminado. X=12 Y=3
+TESTE-8 terminado. X=1 Y=3
+E/S iniciada em TESTE-9
+E/S iniciada em TESTE-1
+Processo TESTE-1 após 2 instruções (havia um comando antes da E/S)
+TESTE-10 terminado. X=0 Y=0
+E/S iniciada em TESTE-2
+E/S iniciada em TESTE-1
+E/S iniciada em TESTE-4
+Processo TESTE-4 após 2 instruções (havia um comando antes da E/S)
+TESTE-2 terminado. X=9 Y=1
+TESTE-1 terminado. X=2 Y=10
+E/S iniciada em TESTE-4
+E/S iniciada em TESTE-5
+Processo TESTE-5 após 2 instruções (havia um comando antes da E/S)
+E/S iniciada em TESTE-6
+TESTE-4 terminado. X=91 Y=5
+TESTE-5 terminado. X=8 Y=5
+E/S iniciada em TESTE-6
+TESTE-9 terminado. X=0 Y=0
+TESTE-6 terminado. X=8 Y=5
+MEDIA DE TROCAS: 4.3
+MEDIA DE INSTRUÇÕES: 2.4651162790697674
+QUANTUM: 3
