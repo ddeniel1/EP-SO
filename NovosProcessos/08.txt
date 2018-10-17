@@ -1,0 +1,17 @@
+TESTE-8
+X=1
+Y=2
+COM
+X=3
+Y=4
+COM
+X=5
+Y=6
+COM
+X=7
+Y=8
+COM
+X=9
+Y=10
+COM
+SAIDA
