@@ -2,14 +2,12 @@ package Teste;
 
 import java.awt.Desktop;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.PriorityQueue;
 import Escalonador.Escalonador;
 import Escalonador.FilaPrioritaria;
@@ -19,9 +17,9 @@ public class Teste {
 	static public double mediaInstrucoes;
 	public static void main(String[] args) throws IOException {
 		
-		ArrayList<Integer> quantuns = new ArrayList();
-		ArrayList<Double> mediasT = new ArrayList();
-		ArrayList<Double> mediasI = new ArrayList();
+		ArrayList<Integer> quantuns = new ArrayList<Integer>();
+		ArrayList<Double> mediasT = new ArrayList<Double>();
+		ArrayList<Double> mediasI = new ArrayList<Double>();
 		FileReader arq = null; 
 		BufferedReader buff = null; 
 		String[] processos = Escalonador.lerProcessos(args); 
@@ -33,19 +31,13 @@ public class Teste {
 			prioridade[i] = buff.readLine();
 		}
 		
-		
-		// Le o quantum e salva na var quantum
 		for (int quantum = 1; quantum <= 22; quantum++) {
 			PrintWriter writer = new PrintWriter("logTeste/log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
 			// Le e adiciona as prioridades e o quantum
-			arq = new FileReader(args[args.length - 2]);
-			buff = new BufferedReader(arq);
 			for (int i = 0; i < processos.length; i++) {
 				processos[i] = (prioridade[i]+ " ").concat(processos[i]);
 				processos[i] = processos[i].concat("" + quantum);
 			}
-			buff.close();
-			arq.close();
 			String[] executando = null;
 			// Cria uma fila de prioridades para os processos prontos, utilizando a classe
 			// FilaPrioritaria() criada para comparar a ordem de prioridade
