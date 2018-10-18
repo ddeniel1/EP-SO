@@ -105,12 +105,14 @@ public class Escalonador {
 				if (j > 0)
 					writer.println(
 							"Interrompendo " + executando.getNomeProcesso() + " após " + (j+1) +" instruções");
+				j++;
 				break;
 			}
 			else if (instrucaoAtual.equals("SAIDA")) {
 				writer.println(executando.getNomeProcesso()+" terminado. X="+ executando.getX() + ". Y="+executando.getY());
 				tabelaDeProcessos.remove(executando);
 				flag = true;
+				j++;
 				break;
 			}
 			executando.setContadorDePrograma(executando.getContadorDePrograma()+1);
