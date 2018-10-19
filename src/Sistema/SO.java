@@ -17,7 +17,6 @@ public class SO {
 	private static ArrayList<BCP> tabelaDeProcessos;
 	private static int qntProcessos;
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		
 		File pasta = new File("processos");
 		File[] arquivos = pasta.listFiles();
@@ -31,7 +30,6 @@ public class SO {
 		
 	}
 	private static ArrayList<BCP> lerProcessos(File[] arquivos) throws IOException {
-		// TODO Auto-generated method stub
 		// FileReader com as prioridades dos processos
 		FileReader arq = new FileReader(arquivos[arquivos.length - 2]);
 		BufferedReader buff = new BufferedReader(arq);				String[] prioridades = new String[arquivos.length - 2];
@@ -49,7 +47,6 @@ public class SO {
 		return tabelaDeProcessos;
 	}
 	private static ArrayList<BCP> criarProcessos(File[] arquivos, String[] prioridades, int quantum) throws IOException {
-		// TODO Auto-generated method stub
 		FileReader arq = null;
 		BufferedReader buffer = null;
 		ArrayList<BCP> tabelaDeProcessos = new ArrayList<BCP>();

@@ -16,12 +16,10 @@ public class Logger {
 	}
 
 	public static void carregaProcesso(String nomeProcesso) {
-		// TODO Auto-generated method stub
 		Logger.writer.println("Carregando "+ nomeProcesso);
 	}
 
 	public static void inicializaLog(int quantum) throws FileNotFoundException, UnsupportedEncodingException {
-		// TODO Auto-generated method stub
 		Logger.writer = new PrintWriter("log/log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
 		
 	}
