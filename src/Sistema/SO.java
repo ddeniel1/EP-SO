@@ -28,7 +28,10 @@ public class SO {
 		Escalonador.inicializaProntos(tabelaDeProcessos.size(), new comparaBCP());
 		Escalonador.inicializaBloqueados();
 		Escalonador.carregarProcessos();
-		
+		BCP executando = null;
+		while (!SO.tabelaDeProcessos.isEmpty()) {
+			executando = Escalonador.escolheProximo(executando);
+		}
 	}
 	private static ArrayList<BCP> lerProcessos(File[] arquivos) throws IOException {
 		// TODO Auto-generated method stub

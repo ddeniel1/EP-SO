@@ -1,5 +1,6 @@
 package Sistema;
 
+import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -43,4 +44,34 @@ public class Escalonador {
 			Logger.carregaProcesso(aux.getNomeProcesso());
 		}
 	}
+	public static BCP escolheProximo(BCP executando) {
+		// TODO Auto-generated method stub
+		if (executando == null) {
+			executando = Escalonador.prontos.poll();
+			executando.setEstado('E');
+		}
+		else {
+			while (Escalonador.prontos.isEmpty())
+				rodaBloqueio();
+			Escalonador.prontos.peek();
+			
+		}
+		return executando;
+	}
+	private static void rodaBloqueio() {
+		// TODO Auto-generated method stub
+		for (BCP bcp : bloqueados) {
+			bcp.setTempoBloqueado(bcp.getTempoBloqueado() - 1);
+			if (bcp.getTempoBloqueado() == 0) {
+				bcp.setEstado('P');
+				prontos.add(bcp);
+
+			}
+		}
+		for (BCP bcp : SO.getTabelaDeProcessos()) {
+			if (bcp.getEstado() == 'P' && bloqueados.contains(bcp))
+				bloqueados.remove(bcp);
+		}
+	}
+	
 }
