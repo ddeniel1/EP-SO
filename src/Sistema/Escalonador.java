@@ -24,11 +24,9 @@ public class Escalonador {
 		Escalonador.bloqueados = bloqueados;
 	}
 	public static void inicializaProntos(int size, comparaBCP comparaBCP) {
-		// TODO Auto-generated method stub
 		Escalonador.prontos = new PriorityQueue<BCP>(size, comparaBCP);
 	}
 	public static void inicializaBloqueados() {
-		// TODO Auto-generated method stub
 		
 	}
 	public static void carregarProcessos() {
