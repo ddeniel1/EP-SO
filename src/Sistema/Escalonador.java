@@ -41,16 +41,50 @@ public class Escalonador {
 	}
 	public static BCP escolheProximo(BCP executando) {
 		// TODO Auto-generated method stub
+		if (Escalonador.prontos.isEmpty() && !Escalonador.bloqueados.isEmpty()) {
+			while (Escalonador.prontos.isEmpty())
+				rodaBloqueio();
+		}else
+			return executando;
 		if (executando == null) {
 			executando = Escalonador.prontos.poll();
 			executando.setEstado('E');
+			Despachante.inserirContexto(executando);
 		}
 		else {
-			while (Escalonador.prontos.isEmpty())
-				rodaBloqueio();
-			Escalonador.prontos.peek();
-			
+			boolean mantem = true;
+			BCP atual = Escalonador.prontos.peek();
+			if(executando.getCreditos() ==  atual.getCreditos()) {
+				if (executando.getCreditos() == 0) {
+					boolean flag = false;
+					for (BCP bcp : bloqueados) 
+						if (bcp.getCreditos() != 0) flag = true;
+					
+					if(flag)SO.resturaCreditos();
+					mantem = false;
+				}
+				else {
+					if (executando.getPrioridade() < atual.getPrioridade())
+						mantem = false;
+					else 
+						mantem = true;
+				}
+				
+			}
+			else if(executando.getCreditos() <  atual.getCreditos())
+				mantem = false;
+			else
+				mantem = true;
+			if (!mantem) {
+				atual = Escalonador.prontos.poll();
+				Escalonador.prontos.add(executando);
+				Despachante.trocaContexto(executando, atual);
+				executando.setEstado('P');
+				atual.setEstado('E');
+				atual = executando;
+			}
 		}
+		
 		return executando;
 	}
 	private static void rodaBloqueio() {

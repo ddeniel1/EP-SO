@@ -2,10 +2,8 @@ package Sistema;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -14,6 +12,8 @@ import Suporte.Logger;
 public class SO {
 	private static ArrayList<BCP> tabelaDeProcessos;
 	private static int qntProcessos;
+	private static int intrucoesTotais;
+	private static int trocasTotais;
 	public static void main(String[] args) throws IOException {
 		
 		File pasta = new File("processos");
@@ -28,6 +28,9 @@ public class SO {
 		BCP executando = null;
 		while (!SO.tabelaDeProcessos.isEmpty()) {
 			executando = Escalonador.escolheProximo(executando);
+			if (executando == null)
+				break;
+			CPU.executarProcesso();
 		}
 	}
 	private static ArrayList<BCP> lerProcessos(File[] arquivos) throws IOException {
@@ -91,6 +94,24 @@ public class SO {
 	}
 	public static void setQntProcessos(int qntProcessos) {
 		SO.qntProcessos = qntProcessos;
+	}
+	public static void resturaCreditos() {
+		// TODO Auto-generated method stub
+		for (BCP bcp : tabelaDeProcessos) {
+			bcp.setCreditos(bcp.getPrioridade());
+		}
+	}
+	public static int getIntrucoesTotais() {
+		return intrucoesTotais;
+	}
+	public static void setIntrucoesTotais(int intrucoesTotais) {
+		SO.intrucoesTotais = intrucoesTotais;
+	}
+	public static int getTrocasTotais() {
+		return trocasTotais;
+	}
+	public static void setTrocasTotais(int trocasTotais) {
+		SO.trocasTotais = trocasTotais;
 	}
 
 }

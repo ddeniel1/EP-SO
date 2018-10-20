@@ -23,4 +23,9 @@ public class Logger {
 		Logger.writer = new PrintWriter("log/log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
 		
 	}
+
+	public static void executando(String nomeProcesso) {
+		// TODO Auto-generated method stub
+		writer.println("Executando "+nomeProcesso);
+	}
 }
