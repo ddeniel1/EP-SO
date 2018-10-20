@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-import Principal.BCP;
+import Sistema.BCP;
 
 public class CriaTeste {
 	static public double mediaTrocas;

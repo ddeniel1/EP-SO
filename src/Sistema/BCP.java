@@ -1,4 +1,4 @@
-package Principal;
+package Sistema;
 
 public class BCP {
 	private String nomeArquivo;

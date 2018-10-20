@@ -1,11 +1,8 @@
 package Sistema;
 
-import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import Principal.BCP;
-import Principal.comparaBCP;
 import Suporte.Logger;
 
 public class Escalonador {

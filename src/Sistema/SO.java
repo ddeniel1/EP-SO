@@ -9,8 +9,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import Principal.BCP;
-import Principal.comparaBCP;
 import Suporte.Logger;
 
 public class SO {
