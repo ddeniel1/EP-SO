@@ -12,7 +12,7 @@ import Suporte.Logger;
 public class SO {
 	private static ArrayList<BCP> tabelaDeProcessos;
 	private static int qntProcessos;
-	private static int intrucoesTotais;
+	private static int instrucoesTotais;
 	private static int trocasTotais;
 	public static void main(String[] args) throws IOException {
 		
@@ -21,17 +21,24 @@ public class SO {
 		Arrays.sort(arquivos);
 		setTabelaDeProcessos(lerProcessos(arquivos));
 		setQntProcessos(tabelaDeProcessos.size());
-		Logger.inicializaLog(tabelaDeProcessos.get(0).getQuantum());
+		int quantum = tabelaDeProcessos.get(0).getQuantum();
+		Logger.inicializaLog(quantum);
 		Escalonador.inicializaProntos(tabelaDeProcessos.size(), new comparaBCP());
 		Escalonador.inicializaBloqueados();
 		Escalonador.carregarProcessos();
 		BCP executando = null;
 		while (!SO.tabelaDeProcessos.isEmpty()) {
+			
 			executando = Escalonador.escolheProximo(executando);
 			if (executando == null)
 				break;
-			CPU.executarProcesso();
+			executando = CPU.executarProcesso(executando);
+			
+			trocasTotais++;
 		}
+		double mediaTrocas = (double)trocasTotais / qntProcessos;
+		double mediasInstrucoes = (double) instrucoesTotais / trocasTotais;
+		Logger.mediasQuantum(mediaTrocas, mediasInstrucoes, quantum);
 	}
 	private static ArrayList<BCP> lerProcessos(File[] arquivos) throws IOException {
 		// FileReader com as prioridades dos processos
@@ -102,16 +109,22 @@ public class SO {
 		}
 	}
 	public static int getIntrucoesTotais() {
-		return intrucoesTotais;
+		return instrucoesTotais;
 	}
 	public static void setIntrucoesTotais(int intrucoesTotais) {
-		SO.intrucoesTotais = intrucoesTotais;
+		SO.instrucoesTotais = intrucoesTotais;
 	}
 	public static int getTrocasTotais() {
 		return trocasTotais;
 	}
 	public static void setTrocasTotais(int trocasTotais) {
 		SO.trocasTotais = trocasTotais;
+	}
+	public static void removeProcesso(BCP executando) {
+		// TODO Auto-generated method stub
+		
+		Despachante.retirarContexto(executando);
+		tabelaDeProcessos.remove(executando);
 	}
 
 }

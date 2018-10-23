@@ -1,5 +1,7 @@
 package Sistema;
 
+import Suporte.Logger;
+
 public class Despachante {
 
 	public static void trocaContexto(BCP executando, BCP atual) {
@@ -12,7 +14,6 @@ public class Despachante {
 		// TODO Auto-generated method stub
 		executando.setX(CPU.getX());
 		executando.setY(CPU.getY());
-		SO.setIntrucoesTotais(SO.getIntrucoesTotais()+(CPU.getContadorDePrograma()-executando.getContadorDePrograma()));
 		executando.setContadorDePrograma(CPU.getContadorDePrograma());
 		executando.setIntrucoes(CPU.getInstrucoes());
 		executando.setCreditos(executando.getCreditos()-1);
@@ -27,6 +28,9 @@ public class Despachante {
 		CPU.setInstrucoes(executando.getIntrucoes());
 		CPU.setQuantum(executando.getQuantum());
 		CPU.setNomeProcesso(executando.getNomeProcesso());
+		Logger.executando(executando.getNomeProcesso());
 	}
+
+	
 	
 }

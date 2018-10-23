@@ -90,7 +90,7 @@ public class Escalonador {
 		double mediaTrocas = (double) trocasTotais / qntProcessos;
 		double mediaInstrucoes = (double) instrucoesTotais / numeroDeQuanta;
 		writer.println("MEDIA DE TROCAS: " + mediaTrocas);
-		writer.println("MEDIA DE INTRUCOES: " + mediaInstrucoes);
+		writer.println("MEDIA DE INSTRUCOES: " + mediaInstrucoes);
 	}
 
 	private static void executarProcesso(BCP executando, PrintWriter writer) {
