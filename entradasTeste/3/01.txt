@@ -1,0 +1,7 @@
+TESTE-1
+COM
+E/S
+Y=24
+E/S
+Y=11
+SAIDA

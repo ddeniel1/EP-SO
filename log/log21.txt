@@ -16,15 +16,15 @@ Interrompendo TESTE-5 após 2 instruções
 Executando TESTE-7
 E/S iniciada em TESTE-7
 Interrompendo TESTE-7 após 4 instruções
+Executando TESTE-2
+E/S iniciada em TESTE-2
+Interrompendo TESTE-2 após 5 instruções
 Executando TESTE-5
 E/S iniciada em TESTE-5
 Interrompendo TESTE-5 após 2 instruções
 Executando TESTE-7
 E/S iniciada em TESTE-7
 Interrompendo TESTE-7 após 9 instruções
-Executando TESTE-2
-E/S iniciada em TESTE-2
-Interrompendo TESTE-2 após 5 instruções
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 2 instruções
@@ -77,24 +77,24 @@ E/S iniciada em TESTE-5
 Interrompendo TESTE-5 após 2 instruções
 Executando TESTE-2
 TESTE-2 terminado. X=9. Y=1
-Executando TESTE-5
-TESTE-5 terminado. X=8. Y=5
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 2 instruções
+Executando TESTE-5
+TESTE-5 terminado. X=8. Y=5
 Executando TESTE-6
 E/S iniciada em TESTE-6
 Interrompendo TESTE-6 após 3 instruções
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 3 instruções
+Executando TESTE-1
+E/S iniciada em TESTE-1
+Interrompendo TESTE-1 após 4 instruções
 Executando TESTE-6
 TESTE-6 terminado. X=8. Y=5
 Executando TESTE-4
 TESTE-4 terminado. X=91. Y=5
-Executando TESTE-1
-E/S iniciada em TESTE-1
-Interrompendo TESTE-1 após 4 instruções
 Executando TESTE-1
 TESTE-1 terminado. X=2. Y=10
 MEDIA DE TROCAS: 3.3

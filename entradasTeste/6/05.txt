@@ -1,0 +1,4 @@
+TESTE-5
+X=22
+COM
+SAIDA

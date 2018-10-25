@@ -1,0 +1,14 @@
+TESTE-10
+Y=26
+X=9
+E/S
+COM
+X=25
+COM
+Y=15
+E/S
+E/S
+X=24
+E/S
+X=14
+SAIDA

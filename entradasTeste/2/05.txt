@@ -1,0 +1,5 @@
+TESTE-5
+X=2
+Y=25
+X=10
+SAIDA

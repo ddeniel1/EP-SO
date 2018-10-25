@@ -43,71 +43,42 @@ public class Escalonador {
 	public static BCP escolheProximo(BCP executando) {
 		// TODO Auto-generated method stub
 		BCP atual;
-		System.out.println("Prontos");
-		for (BCP bcp : prontos) {
-			System.out.println(bcp.getNomeProcesso()+ " "+ bcp.getCreditos() + " " + bcp.getPrioridade());
-			
-		}
-		System.out.println("__________________");
-		System.out.println("Bloqueados");
-		for (BCP bcp : bloqueados) {
-			System.out.println(bcp.getNomeProcesso()+ " "+ bcp.getCreditos() + " " + bcp.getPrioridade());
-			
-		}
-		System.out.println("__________________");
+		boolean troca = false;
+		
 		if (Escalonador.prontos.isEmpty() && !Escalonador.bloqueados.isEmpty()) {
 			while (Escalonador.prontos.isEmpty())
 				rodaBloqueio();
 		}
-		if (executando == null) {
-			atual = Escalonador.prontos.peek();
+		
+		atual = Escalonador.prontos.peek();
+		if (executando == null || atual.getCreditos() == 0) {
 			if (atual.getCreditos() == 0) {
 				boolean flag = false;
 				for (BCP bcp : bloqueados) 
 					if (bcp.getCreditos() != 0) flag = true;
-				
-				if(flag)SO.resturaCreditos();
-			}
-			executando = Escalonador.prontos.poll();
-			executando.setEstado('E');
-			Despachante.inserirContexto(executando);
-			
-		}
-		else {
-			boolean mantem = true;
-			atual = Escalonador.prontos.peek();
-			if(executando.getCreditos() ==  atual.getCreditos()) {
-				
-				if (atual.getCreditos() == 0) {
-					boolean flag = false;
-					for (BCP bcp : bloqueados) 
-						if (bcp.getCreditos() != 0) flag = true;
 					
-					if(flag)SO.resturaCreditos();
-					mantem = false;
-				}
-				else {
-					if (executando.getPrioridade() < atual.getPrioridade())
-						mantem = false;
-					else 
-						mantem = true;
-				}
+				if(!flag)SO.resturaCreditos();
+				else 
+					while (Escalonador.prontos.isEmpty())
+						rodaBloqueio();
 				
 			}
-			else if(executando.getCreditos() <  atual.getCreditos())
-				mantem = false;
-			else
-				mantem = true;
-			if (!mantem) {
-				atual = Escalonador.prontos.poll();
-				Escalonador.prontos.add(executando);
-				Despachante.trocaContexto(executando, atual);
-				executando.setEstado('P');
-				atual.setEstado('E');
-				executando = atual;
-			}
+			troca = true;
 		}
+		else if (executando.getCreditos() == atual.getCreditos() && executando.getEstado() == 'P') {
+			Escalonador.prontos.remove(executando);
+			troca = false;
+		}
+			
+		else 
+			troca = true;
 		
+		
+		if (troca) 
+			executando = Escalonador.prontos.poll();
+		
+		executando.setEstado('E');
+		Despachante.inserirContexto(executando);
 		return executando;
 	}
 	public static void rodaBloqueio() {
@@ -117,7 +88,7 @@ public class Escalonador {
 			if (bcp.getTempoBloqueado() == 0) {
 				bcp.setEstado('P');
 				prontos.add(bcp);
-
+				
 			}
 		}
 		for (BCP bcp : SO.getTabelaDeProcessos()) {
@@ -129,12 +100,19 @@ public class Escalonador {
 		// TODO Auto-generated method stub
 		executando.setEstado('B');
 		executando.setTempoBloqueado(2);
+		Despachante.retirarContexto(executando);
 		bloqueados.add(executando);
-		Despachante.retirarContexto(executando);
 	}
-	public static void troca(BCP executando) {
+	public static void retirar(BCP executando) {
 		// TODO Auto-generated method stub
+		executando.setEstado('P');
 		Despachante.retirarContexto(executando);
+		prontos.add(executando);
+	}
+	public static void saida(BCP executando) {
+		// TODO Auto-generated method stub
+		executando.setEstado('F');
+		SO.removeProcesso(executando);
 	}
 	
 }

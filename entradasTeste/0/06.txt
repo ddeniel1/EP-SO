@@ -1,0 +1,11 @@
+TESTE-6
+E/S
+COM
+X=0
+X=13
+X=11
+COM
+E/S
+X=4
+Y=22
+SAIDA

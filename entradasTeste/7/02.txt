@@ -1,0 +1,4 @@
+TESTE-2
+X=27
+X=10
+SAIDA

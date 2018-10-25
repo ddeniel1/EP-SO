@@ -1,0 +1,15 @@
+TESTE-3
+COM
+E/S
+Y=28
+COM
+Y=7
+E/S
+Y=26
+E/S
+E/S
+E/S
+COM
+COM
+E/S
+SAIDA

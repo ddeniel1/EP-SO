@@ -1,0 +1,6 @@
+TESTE-6
+COM
+Y=16
+X=18
+X=1
+SAIDA

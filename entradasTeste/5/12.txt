@@ -1,0 +1,11 @@
+TESTE-12
+X=0
+E/S
+E/S
+X=3
+Y=5
+X=16
+X=19
+Y=22
+Y=17
+SAIDA

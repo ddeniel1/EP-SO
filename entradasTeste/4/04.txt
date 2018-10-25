@@ -1,0 +1,7 @@
+TESTE-4
+Y=2
+E/S
+Y=24
+X=11
+E/S
+SAIDA

@@ -1,0 +1,5 @@
+TESTE-8
+X=2
+COM
+COM
+SAIDA

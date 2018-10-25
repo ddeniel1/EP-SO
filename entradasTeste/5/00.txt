@@ -1,0 +1,6 @@
+TESTE-0
+X=7
+X=21
+X=0
+Y=28
+SAIDA

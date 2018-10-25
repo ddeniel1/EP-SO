@@ -1,0 +1,4 @@
+TESTE-6
+E/S
+X=12
+SAIDA

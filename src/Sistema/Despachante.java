@@ -31,6 +31,11 @@ public class Despachante {
 		Logger.executando(executando.getNomeProcesso());
 	}
 
+	public static void fimQuantum(BCP executando) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 }

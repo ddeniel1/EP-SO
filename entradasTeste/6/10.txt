@@ -1,0 +1,7 @@
+TESTE-10
+X=17
+Y=24
+X=5
+E/S
+X=28
+SAIDA

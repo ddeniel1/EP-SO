@@ -1,0 +1,12 @@
+TESTE-11
+E/S
+E/S
+Y=13
+Y=28
+Y=15
+X=17
+E/S
+Y=13
+X=12
+Y=8
+SAIDA

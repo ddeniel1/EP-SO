@@ -1,0 +1,9 @@
+TESTE-1
+Y=22
+COM
+E/S
+COM
+X=29
+X=29
+E/S
+SAIDA

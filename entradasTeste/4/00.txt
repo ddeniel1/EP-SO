@@ -1,0 +1,8 @@
+TESTE-0
+Y=17
+E/S
+COM
+X=18
+COM
+E/S
+SAIDA

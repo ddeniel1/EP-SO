@@ -40,11 +40,15 @@ public class CPU {
 		CPU.quantum = quantum;
 	}
 
-	public static BCP executarProcesso(BCP executando) {
+	public static void executarProcesso(BCP executando) {
 		// TODO Auto-generated method stub
 		boolean flag = false;
 		int i;
+		if (!Escalonador.getBloqueados().isEmpty()) {
+			Escalonador.rodaBloqueio();
+		}
 		for (i = 0; i < quantum ; i++) {
+			
 			String instrucaoAtual = instrucoes[contadorDePrograma];
 			if (instrucaoAtual.startsWith("X="))
 				x = Integer.parseInt(instrucaoAtual.substring(2));
@@ -61,9 +65,8 @@ public class CPU {
 			}
 			else if (instrucaoAtual.equals("SAIDA")) {
 				contadorDePrograma++;
-				SO.removeProcesso(executando);
+				Escalonador.saida(executando);
 				Logger.finalizarProcesso(nomeProcesso, i);
-				executando = null;
 				flag = true;
 				i++;
 				break;
@@ -72,14 +75,10 @@ public class CPU {
 		}
 		//System.out.println(i);
 		SO.setIntrucoesTotais(SO.getIntrucoesTotais() + i);
-		if (!Escalonador.getBloqueados().isEmpty()) {
-			Escalonador.rodaBloqueio();
-		}
 		if(!flag) {
 			Logger.interrompendo(nomeProcesso, i);
-			Escalonador.troca(executando);
-		}
-		return executando;	
+			Escalonador.retirar(executando);
+		}	
 	}
 	public static String getNomeProcesso() {
 		return nomeProcesso;

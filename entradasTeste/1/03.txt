@@ -1,0 +1,13 @@
+TESTE-3
+E/S
+X=0
+X=4
+X=1
+X=4
+E/S
+X=26
+X=16
+X=23
+X=15
+X=4
+SAIDA

@@ -1,0 +1,10 @@
+TESTE-13
+Y=5
+X=11
+X=0
+X=20
+Y=20
+X=8
+E/S
+E/S
+SAIDA

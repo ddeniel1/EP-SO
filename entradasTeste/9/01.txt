@@ -1,0 +1,5 @@
+TESTE-1
+X=28
+COM
+Y=28
+SAIDA
