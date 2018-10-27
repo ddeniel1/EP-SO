@@ -1,5 +1,4 @@
 TESTE-10
-X=23
-E/S
-X=19
+X=0
+COM
 SAIDA

@@ -1,3 +1,15 @@
 TESTE-4
-X=5
+X=9
+Y=22
+E/S
+COM
+Y=0
+E/S
+COM
+E/S
+COM
+E/S
+E/S
+E/S
+X=1
 SAIDA

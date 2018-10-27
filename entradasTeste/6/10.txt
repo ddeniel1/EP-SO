@@ -1,7 +1,10 @@
 TESTE-10
-X=17
-Y=24
-X=5
 E/S
-X=28
+X=0
+X=16
+Y=23
+COM
+E/S
+E/S
+Y=5
 SAIDA

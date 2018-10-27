@@ -1,5 +1,4 @@
 TESTE-10
 E/S
-E/S
-E/S
+COM
 SAIDA

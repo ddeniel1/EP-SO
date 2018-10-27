@@ -1,0 +1,6 @@
+TESTE-14
+E/S
+Y=10
+Y=12
+E/S
+SAIDA

@@ -1,14 +1,9 @@
 TESTE-3
 E/S
 COM
-Y=2
-X=13
-X=28
+X=23
 E/S
 COM
-Y=23
-X=2
-X=11
+Y=26
 COM
-X=20
 SAIDA

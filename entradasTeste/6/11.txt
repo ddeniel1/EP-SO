@@ -1,6 +1,9 @@
 TESTE-11
 COM
+Y=0
+Y=0
+Y=24
 COM
-X=25
-Y=18
+E/S
+E/S
 SAIDA

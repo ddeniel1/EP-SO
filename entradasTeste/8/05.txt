@@ -1,12 +1,4 @@
 TESTE-5
-Y=21
-COM
 E/S
-E/S
-X=13
-Y=28
-COM
-Y=24
-E/S
-X=6
+Y=5
 SAIDA

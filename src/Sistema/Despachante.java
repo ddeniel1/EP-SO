@@ -26,16 +26,8 @@ public class Despachante {
 		CPU.setY(executando.getY());
 		CPU.setContadorDePrograma(executando.getContadorDePrograma());
 		CPU.setInstrucoes(executando.getIntrucoes());
-		CPU.setQuantum(executando.getQuantum());
 		CPU.setNomeProcesso(executando.getNomeProcesso());
 		Logger.executando(executando.getNomeProcesso());
 	}
 
-	public static void fimQuantum(BCP executando) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	
 }

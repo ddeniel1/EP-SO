@@ -1,11 +1,10 @@
 TESTE-8
-X=5
+X=29
 E/S
-E/S
+X=20
+Y=8
+COM
+Y=3
 COM
 E/S
-COM
-Y=26
-E/S
-Y=24
 SAIDA

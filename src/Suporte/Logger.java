@@ -52,7 +52,7 @@ public class Logger {
 	}
 
 	public static void mediasQuantum(double mediaTrocas, double mediasInstrucoes, int quantum) {
-		// TODO Auto-generated method stub
+		// TODO Sua mãe
 		writer.println("MEDIA DE TROCAS: " + mediaTrocas);
 		writer.println("MEDIA DE INSTRUCOES: " +  mediasInstrucoes);
 		writer.println("QUANTUM: "+ quantum);

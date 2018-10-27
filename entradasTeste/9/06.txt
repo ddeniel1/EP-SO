@@ -1,6 +1,5 @@
 TESTE-6
+E/S
+E/S
 COM
-Y=16
-X=18
-X=1
 SAIDA

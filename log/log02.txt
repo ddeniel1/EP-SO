@@ -84,45 +84,61 @@ Interrompendo TESTE-5 após 2 instruções
 Executando TESTE-7
 TESTE-7 terminado. X=12. Y=3
 Executando TESTE-2
-E/S iniciada em TESTE-2
-Interrompendo TESTE-2 após 5 instruções
+Interrompendo TESTE-2 após 2 instruções
 Executando TESTE-5
 TESTE-5 terminado. X=8. Y=5
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 2 instruções
 Executando TESTE-8
-TESTE-8 terminado. X=1. Y=3
+Interrompendo TESTE-8 após 2 instruções
+Executando TESTE-9
+Interrompendo TESTE-9 após 2 instruções
 Executando TESTE-9
 E/S iniciada em TESTE-9
-Interrompendo TESTE-9 após 3 instruções
+Interrompendo TESTE-9 após 1 instruções
 Executando TESTE-2
-TESTE-2 terminado. X=9. Y=1
+E/S iniciada em TESTE-2
+Interrompendo TESTE-2 após 3 instruções
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 3 instruções
+Executando TESTE-8
+Interrompendo TESTE-8 após 4 instruções
+Executando TESTE-6
+Interrompendo TESTE-6 após 2 instruções
+Executando TESTE-10
+TESTE-10 terminado. X=0. Y=0
+Executando TESTE-8
+TESTE-8 terminado. X=1. Y=3
+Executando TESTE-4
+TESTE-4 terminado. X=91. Y=5
+Executando TESTE-2
+TESTE-2 terminado. X=9. Y=1
 Executando TESTE-9
 TESTE-9 terminado. X=0. Y=0
 Executando TESTE-6
+Interrompendo TESTE-6 após 4 instruções
+Executando TESTE-1
+Interrompendo TESTE-1 após 2 instruções
+Executando TESTE-6
 E/S iniciada em TESTE-6
-Interrompendo TESTE-6 após 7 instruções
-Executando TESTE-10
-TESTE-10 terminado. X=0. Y=0
-Executando TESTE-4
-TESTE-4 terminado. X=91. Y=5
+Interrompendo TESTE-6 após 1 instruções
+Executando TESTE-1
+E/S iniciada em TESTE-1
+Interrompendo TESTE-1 após 1 instruções
 Executando TESTE-6
 E/S iniciada em TESTE-6
 Interrompendo TESTE-6 após 3 instruções
 Executando TESTE-1
+Interrompendo TESTE-1 após 2 instruções
+Executando TESTE-1
 E/S iniciada em TESTE-1
-Interrompendo TESTE-1 após 3 instruções
+Interrompendo TESTE-1 após 2 instruções
 Executando TESTE-6
 TESTE-6 terminado. X=8. Y=5
 Executando TESTE-1
-E/S iniciada em TESTE-1
-Interrompendo TESTE-1 após 4 instruções
-Executando TESTE-1
 TESTE-1 terminado. X=2. Y=10
-MEDIA DE TROCAS: 4.6
-MEDIA DE INSTRUCOES: 3.0217391304347827
+MEDIA DE TROCAS: 5.4
+MEDIA DE INSTRUCOES: 1.1487603305785123
 QUANTUM: 2

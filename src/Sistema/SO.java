@@ -15,7 +15,8 @@ public class SO {
 		
 		setTabelaDeProcessos(Leitor.leiaPastaDeArquivos("processos"));
 		setQntProcessos(tabelaDeProcessos.size());
-		int quantum = tabelaDeProcessos.get(0).getQuantum();
+		int quantum = Leitor.lerQuantum("processos");
+		CPU.setQuantum(quantum); 
 		Logger.inicializaLog(quantum);
 		Escalonador.inicializaProntos(tabelaDeProcessos.size(), new comparaBCP());
 		Escalonador.inicializaBloqueados();
@@ -26,12 +27,13 @@ public class SO {
 			executando = Escalonador.escolheProximo(executando);
 			if (executando == null)
 				break;
+			System.out.println(executando.getNomeProcesso());
 			CPU.executarProcesso(executando);
 			
 			trocasTotais++;
 		}
 		double mediaTrocas = (double)trocasTotais / qntProcessos;
-		double mediasInstrucoes = (double) instrucoesTotais / trocasTotais;
+		double mediasInstrucoes = (double) instrucoesTotais / CPU.getQuanta();
 		Logger.mediasQuantum(mediaTrocas, mediasInstrucoes, quantum);
 	}
 	public static ArrayList<BCP> getTabelaDeProcessos() {
@@ -50,6 +52,7 @@ public class SO {
 		// TODO Auto-generated method stub
 		for (BCP bcp : tabelaDeProcessos) {
 			bcp.setCreditos(bcp.getPrioridade());
+			bcp.setQuantum(1);
 		}
 	}
 	public static int getIntrucoesTotais() {

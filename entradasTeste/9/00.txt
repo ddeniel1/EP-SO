@@ -1,8 +1,8 @@
 TESTE-0
-Y=6
-E/S
 Y=20
-E/S
 COM
-Y=1
+E/S
+X=3
+X=8
+Y=2
 SAIDA

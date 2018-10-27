@@ -1,5 +1,14 @@
 TESTE-3
-Y=0
-X=10
-X=21
+COM
+X=2
+Y=27
+E/S
+Y=8
+X=3
+COM
+E/S
+E/S
+E/S
+X=11
+X=14
 SAIDA

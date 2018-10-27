@@ -1,5 +1,14 @@
 TESTE-5
+COM
+COM
+E/S
 X=2
-Y=25
-X=10
+E/S
+E/S
+X=20
+X=1
+E/S
+COM
+E/S
+COM
 SAIDA

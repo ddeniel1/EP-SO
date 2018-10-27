@@ -1,4 +1,4 @@
 TESTE-5
-X=22
-COM
+Y=22
+E/S
 SAIDA

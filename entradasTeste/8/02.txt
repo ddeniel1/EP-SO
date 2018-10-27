@@ -1,5 +1,9 @@
 TESTE-2
+COM
+COM
 E/S
-E/S
-E/S
+X=13
+Y=27
+COM
+COM
 SAIDA

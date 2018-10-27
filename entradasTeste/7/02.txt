@@ -1,4 +1,7 @@
 TESTE-2
-X=27
-X=10
+X=8
+X=21
+X=22
+COM
+Y=6
 SAIDA

@@ -1,8 +1,11 @@
 TESTE-0
-Y=17
+Y=10
+X=2
+X=13
+X=8
+X=14
 E/S
-COM
-X=18
-COM
-E/S
+Y=8
+Y=19
+Y=15
 SAIDA

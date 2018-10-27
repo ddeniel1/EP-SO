@@ -82,7 +82,7 @@ Executando TESTE-5
 E/S iniciada em TESTE-5
 Interrompendo TESTE-5 após 2 instruções
 Executando TESTE-2
-TESTE-2 terminado. X=9. Y=1
+Interrompendo TESTE-2 após 5 instruções
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 2 instruções
@@ -90,6 +90,8 @@ Executando TESTE-5
 TESTE-5 terminado. X=8. Y=5
 Executando TESTE-9
 TESTE-9 terminado. X=0. Y=0
+Executando TESTE-2
+TESTE-2 terminado. X=9. Y=1
 Executando TESTE-4
 E/S iniciada em TESTE-4
 Interrompendo TESTE-4 após 3 instruções
@@ -105,6 +107,6 @@ Executando TESTE-6
 TESTE-6 terminado. X=8. Y=5
 Executando TESTE-1
 TESTE-1 terminado. X=2. Y=10
-MEDIA DE TROCAS: 3.7
-MEDIA DE INSTRUCOES: 3.7567567567567566
+MEDIA DE TROCAS: 3.8
+MEDIA DE INSTRUCOES: 1.759493670886076
 QUANTUM: 5

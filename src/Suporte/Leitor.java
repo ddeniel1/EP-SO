@@ -2,6 +2,7 @@ package Suporte;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,6 +39,14 @@ public class Leitor {
 		return tabelaDeProcessos;
 	}
 
+	public static int lerQuantum (String pasta) throws NumberFormatException, IOException {
+		String nomeArquivo = pasta+"/quantum.txt";
+		FileReader arq = new FileReader(nomeArquivo);
+		BufferedReader buff = new BufferedReader(arq);
+		return Integer.parseInt(buff.readLine());
+	}
+	
+	
 	private static ArrayList<BCP> criarProcessos(File[] arquivos, String[] prioridades, int quantum) throws IOException {
 		FileReader arq = null;
 		BufferedReader buffer = null;
@@ -60,7 +69,6 @@ public class Leitor {
 			atual.setNomeProcesso(aux2[0]);
 			atual.setPrioridade(Integer.parseInt(prioridades[i]));
 			atual.setCreditos(atual.getPrioridade());
-			atual.setQuantum(quantum);
 			atual.setEstado('P');
 			String[] help = new String[aux2.length - 1];
 			for (int j = 0; j < help.length; j++) {

@@ -1,11 +1,11 @@
 TESTE-2
-X=22
 E/S
-E/S
-Y=13
-Y=8
-E/S
+X=9
 COM
-E/S
+Y=2
+COM
 X=18
+E/S
+X=26
+COM
 SAIDA

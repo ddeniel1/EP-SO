@@ -1,5 +1,15 @@
 TESTE-1
+X=26
+Y=3
+COM
+Y=1
 E/S
-X=7
-X=23
+COM
+COM
+X=27
+X=15
+Y=17
+COM
+Y=5
+Y=6
 SAIDA

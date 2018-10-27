@@ -4,7 +4,7 @@ public class BCP {
 	private String nomeArquivo;
 	private String nomeProcesso;
 	private String[] intrucoes;
-	private int quantum;
+	private int quantum = 1;
 	private int prioridade;
 	private int contadorDePrograma = 0;
 	private char estado;

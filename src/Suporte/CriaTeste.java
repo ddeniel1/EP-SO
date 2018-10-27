@@ -41,9 +41,11 @@ public class CriaTeste {
 		ArrayList<BCP> tabelaDeProcessosCopia = Leitor.leiaPastaDeArquivos(pasta);
 		SO.setQntProcessos(tabelaDeProcessosCopia.size());
 		for (int quantum = 1; quantum < 22; quantum++) {
+			CPU.setQuantum(quantum);
 			double mediaTrocas = 0;
 			trocaTotais = 0;
 			double mediaInstrucoes = 0;
+			CPU.setQuanta(0);
 			SO.setIntrucoesTotais(0);
 			SO.setTabelaDeProcessos(copiarTabelaDeProcessos(tabelaDeProcessosCopia, quantum));
 			Logger.inicializaLog(quantum);
@@ -53,8 +55,7 @@ public class CriaTeste {
 			BCP executando = null;
 			executarProcessos(executando);
 			mediaTrocas = (double)trocaTotais / SO.getQntProcessos();
-			System.out.println(mediaTrocas);
-			mediaInstrucoes = (double)SO.getIntrucoesTotais() / trocaTotais;
+			mediaInstrucoes = (double)SO.getIntrucoesTotais() / CPU.getQuanta();
 			Logger.mediasQuantum(mediaTrocas, mediaInstrucoes, quantum);
 			quantuns.add(quantum);
 			mediasT.add(mediaTrocas);
@@ -112,7 +113,7 @@ public class CriaTeste {
 			bcp.setContadorDePrograma(0);
 			bcp.setCreditos(bcp.getPrioridade());
 			bcp.setEstado('P');
-			bcp.setQuantum(quantum);
+			bcp.setQuantum(1);
 			bcp.setX(0);
 			bcp.setY(0);
 			bcp.setTempoBloqueado(0);
@@ -163,9 +164,9 @@ public class CriaTeste {
 				for (int k = 0; k < instrucoes; k++) {
 					int instruc = gerador.nextInt(20);
 					if (instruc<5) 
-						writer.println("X=" + (int) (Math.random() * 30));
+						writer.println("X=" + gerador.nextInt(30));
 					else if (instruc < 10)
-						writer.println("Y=" + (int) (Math.random() * 30));
+						writer.println("Y=" + gerador.nextInt(30));
 					else if (instruc < 15)
 						writer.println("COM");
 					else

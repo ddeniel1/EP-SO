@@ -1,13 +1,4 @@
 TESTE-0
 E/S
-COM
-X=22
-COM
-X=5
-X=11
-X=17
-X=0
-COM
-Y=27
-X=6
+X=13
 SAIDA

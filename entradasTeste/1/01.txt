@@ -1,8 +1,4 @@
 TESTE-1
-E/S
-Y=18
-X=23
-E/S
-X=3
-E/S
+Y=13
+X=7
 SAIDA

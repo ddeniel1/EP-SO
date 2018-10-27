@@ -9,6 +9,7 @@ public class CPU {
 	private static int contadorDePrograma;
 	private static String[] instrucoes;
 	private static int quantum;
+	private static int quanta = 0;
 	public static int getX() {
 		return x;
 	}
@@ -47,7 +48,8 @@ public class CPU {
 		if (!Escalonador.getBloqueados().isEmpty()) {
 			Escalonador.rodaBloqueio();
 		}
-		for (i = 0; i < quantum ; i++) {
+		int quantaAtual = executando.getQuantum();
+		for (i = 0; i < (quantum*quantaAtual) ; i++) {
 			
 			String instrucaoAtual = instrucoes[contadorDePrograma];
 			if (instrucaoAtual.startsWith("X="))
@@ -72,9 +74,13 @@ public class CPU {
 				break;
 			}
 			contadorDePrograma++;
+			
 		}
 		//System.out.println(i);
 		SO.setIntrucoesTotais(SO.getIntrucoesTotais() + i);
+		quanta+= quantaAtual;
+		System.out.println("quanta: "+ quanta);
+		System.out.println("IT: "+ SO.getIntrucoesTotais());
 		if(!flag) {
 			Logger.interrompendo(nomeProcesso, i);
 			Escalonador.retirar(executando);
@@ -85,5 +91,11 @@ public class CPU {
 	}
 	public static void setNomeProcesso(String nomeProcesso) {
 		CPU.nomeProcesso = nomeProcesso;
+	}
+	public static int getQuanta() {
+		return quanta;
+	}
+	public static void setQuanta(int quanta) {
+		CPU.quanta = quanta;
 	}
 }
