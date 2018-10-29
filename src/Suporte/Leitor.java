@@ -13,7 +13,6 @@ import Sistema.BCP;
 public class Leitor {
 
 	public static ArrayList<BCP> leiaPastaDeArquivos(String string) throws IOException {
-		// TODO Auto-generated method stub
 		File pasta = new File("processos");
 		File[] arquivos = pasta.listFiles();
 		Arrays.sort(arquivos);
@@ -21,10 +20,10 @@ public class Leitor {
 	}
 
 	private static ArrayList<BCP> lerProcessos(File[] arquivos) throws IOException {
-		// TODO Auto-generated method stub
 		// FileReader com as prioridades dos processos
 		FileReader arq = new FileReader(arquivos[arquivos.length - 2]);
-		BufferedReader buff = new BufferedReader(arq);				String[] prioridades = new String[arquivos.length - 2];
+		BufferedReader buff = new BufferedReader(arq);
+		String[] prioridades = new String[arquivos.length - 2];
 		// Laco que coloca as prioridades dos processos
 		for (int i = 0; i < prioridades.length; i++) {
 			prioridades[i] = buff.readLine();
@@ -39,15 +38,15 @@ public class Leitor {
 		return tabelaDeProcessos;
 	}
 
-	public static int lerQuantum (String pasta) throws NumberFormatException, IOException {
-		String nomeArquivo = pasta+"/quantum.txt";
+	public static int lerQuantum(String pasta) throws NumberFormatException, IOException {
+		String nomeArquivo = pasta + "/quantum.txt";
 		FileReader arq = new FileReader(nomeArquivo);
 		BufferedReader buff = new BufferedReader(arq);
 		return Integer.parseInt(buff.readLine());
 	}
-	
-	
-	private static ArrayList<BCP> criarProcessos(File[] arquivos, String[] prioridades, int quantum) throws IOException {
+
+	private static ArrayList<BCP> criarProcessos(File[] arquivos, String[] prioridades, int quantum)
+			throws IOException {
 		FileReader arq = null;
 		BufferedReader buffer = null;
 		ArrayList<BCP> tabelaDeProcessos = new ArrayList<BCP>();

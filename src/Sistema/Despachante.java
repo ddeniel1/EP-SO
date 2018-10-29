@@ -3,15 +3,14 @@ package Sistema;
 import Suporte.Logger;
 
 public class Despachante {
+	// Esse aqui soh serve pra salvar o contexto e atualizar o contexto no BCP do processo.
 
 	public static void trocaContexto(BCP executando, BCP atual) {
-		// TODO Auto-generated method stub
 		retirarContexto(executando);
 		inserirContexto(atual);
 	}
 
 	public static void retirarContexto(BCP executando) {
-		// TODO Auto-generated method stub
 		executando.setX(CPU.getX());
 		executando.setY(CPU.getY());
 		executando.setContadorDePrograma(CPU.getContadorDePrograma());
@@ -21,7 +20,6 @@ public class Despachante {
 	}
 
 	public static void inserirContexto(BCP executando) {
-		// TODO Auto-generated method stub
 		CPU.setX(executando.getX());
 		CPU.setY(executando.getY());
 		CPU.setContadorDePrograma(executando.getContadorDePrograma());

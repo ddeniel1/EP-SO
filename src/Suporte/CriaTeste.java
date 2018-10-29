@@ -23,18 +23,18 @@ import Sistema.comparaBCP;
 
 public class CriaTeste {
 	private static int trocaTotais;
+
+	// Classe auxiliar para criacao de casos testes para fazer os graficos
 	public static void main(String[] args) throws IOException {
 		lerPastaProcessos("processos");
 		lerPastaProcessos("NovosProcessos");
-		
+
 		criarTestes();
 		lerTestes("entradasTeste");
-		
-		
+
 	}
 
 	private static void lerPastaProcessos(String pasta) throws IOException {
-		// TODO Auto-generated method stub
 		ArrayList<Integer> quantuns = new ArrayList<Integer>();
 		ArrayList<Double> mediasT = new ArrayList<Double>();
 		ArrayList<Double> mediasI = new ArrayList<Double>();
@@ -54,8 +54,8 @@ public class CriaTeste {
 			Escalonador.carregarProcessos();
 			BCP executando = null;
 			executarProcessos(executando);
-			mediaTrocas = (double)trocaTotais / SO.getQntProcessos();
-			mediaInstrucoes = (double)SO.getIntrucoesTotais() / CPU.getQuanta();
+			mediaTrocas = (double) trocaTotais / SO.getQntProcessos();
+			mediaInstrucoes = (double) SO.getIntrucoesTotais() / CPU.getQuanta();
 			Logger.mediasQuantum(mediaTrocas, mediaInstrucoes, quantum);
 			quantuns.add(quantum);
 			mediasT.add(mediaTrocas);
@@ -63,51 +63,47 @@ public class CriaTeste {
 		}
 		if (pasta.equals("processos")) {
 			gerarCSV("Relatorio/resumoProcessos.csv", quantuns, mediasI, mediasT);
-		}
-		else if (pasta.equals("NovosProcessos")) {
+		} else if (pasta.equals("NovosProcessos")) {
 			gerarCSV("Relatorio/resumoNovosProcessos.csv", quantuns, mediasI, mediasT);
-		}
-		else {
-			String nomeArquivo = "Relatorio/"+pasta+".csv";
+		} else {
+			String nomeArquivo = "Relatorio/" + pasta + ".csv";
 			gerarCSV(nomeArquivo, quantuns, mediasI, mediasT);
 		}
-		
+
 	}
 
 	private static void gerarCSV(String nomeArquivo, ArrayList<Integer> quantuns, ArrayList<Double> mediasI,
 			ArrayList<Double> mediasT) throws IOException {
-		// TODO Auto-generated method stub
 		FileWriter writer = new FileWriter(nomeArquivo);
-		
-		writer.append("Identifica√ß√£o");
-        writer.append(',');
-        writer.append("QNT_Quantum");
-        writer.append(',');
-        writer.append("MediaTrocas");
-        writer.append(",");
-        writer.append("MediaIntrucoes");
-        writer.append(",");
-        writer.append("Tipo");
-        writer.append('\n');
-        
-        for (int i = 0; i < quantuns.size(); i++) {
-			writer.append("Quantum"+ quantuns.get(i));
+
+		writer.append("IdentificaÁ„o");
+		writer.append(',');
+		writer.append("QNT_Quantum");
+		writer.append(',');
+		writer.append("MediaTrocas");
+		writer.append(",");
+		writer.append("MediaIntrucoes");
+		writer.append(",");
+		writer.append("Tipo");
+		writer.append('\n');
+
+		for (int i = 0; i < quantuns.size(); i++) {
+			writer.append("Quantum" + quantuns.get(i));
 			writer.append(",");
-			writer.append(""+quantuns.get(i));
+			writer.append("" + quantuns.get(i));
 			writer.append(",");
-			writer.append(""+mediasT.get(i));
+			writer.append("" + mediasT.get(i));
 			writer.append(",");
-			writer.append(""+mediasI.get(i));
+			writer.append("" + mediasI.get(i));
 			writer.append(",");
-			writer.append("Quantum"+ quantuns.get(i));
+			writer.append("Quantum" + quantuns.get(i));
 			writer.append("\n");
 		}
-        writer.flush();
-        writer.close();
+		writer.flush();
+		writer.close();
 	}
 
 	private static ArrayList<BCP> copiarTabelaDeProcessos(ArrayList<BCP> tabelaDeProcessosCopia, int quantum) {
-		// TODO Auto-generated method stub
 		ArrayList<BCP> copia = new ArrayList<BCP>();
 		for (BCP bcp : tabelaDeProcessosCopia) {
 			bcp.setContadorDePrograma(0);
@@ -118,16 +114,15 @@ public class CriaTeste {
 			bcp.setY(0);
 			bcp.setTempoBloqueado(0);
 			copia.add(bcp);
-			
+
 		}
 		return copia;
 	}
 
 	private static void executarProcessos(BCP executando) {
-		// TODO Auto-generated method stub
-		while(!SO.getTabelaDeProcessos().isEmpty()) {
+		while (!SO.getTabelaDeProcessos().isEmpty()) {
 			executando = Escalonador.escolheProximo(executando);
-			if (executando == null) 
+			if (executando == null)
 				break;
 			CPU.executarProcesso(executando);
 			trocaTotais++;
@@ -135,42 +130,38 @@ public class CriaTeste {
 	}
 
 	private static void lerTestes(String pasta) throws IOException {
-		// TODO Auto-generated method stub
 		File pastas[];
 		File diretorio = new File(pasta);
 		pastas = diretorio.listFiles();
-		for(int i = 0; i < pastas.length; i++){
-		
-			String nomePasta = "entradasTeste/"+pastas[i].getName();
+		for (int i = 0; i < pastas.length; i++) {
+
+			String nomePasta = "entradasTeste/" + pastas[i].getName();
 			lerPastaProcessos(nomePasta);
 		}
 	}
 
-	
-
 	private static void criarTestes() throws FileNotFoundException, UnsupportedEncodingException {
-		// TODO Auto-generated method stub
 		Random gerador = new Random();
 		for (int i = 0; i < 10; i++) {
 			new File("entradasTeste/" + i + "/").mkdirs();
-			int processos = gerador.nextInt(15)+1;
+			int processos = gerador.nextInt(15) + 1;
 			for (int j = 0; j < processos; j++) {
-				
+
 				PrintWriter writer = new PrintWriter("entradasTeste/" + i + "/" + (j < 9 ? "0" + j : j) + ".txt",
 						"UTF-8");
 				String s = "TESTE-" + j;
 				writer.println(s);
-				int instrucoes = gerador.nextInt(21)+1;
+				int instrucoes = gerador.nextInt(21) + 1;
 				for (int k = 0; k < instrucoes; k++) {
 					int instruc = gerador.nextInt(20);
-					if (instruc<5) 
+					if (instruc < 5)
 						writer.println("X=" + gerador.nextInt(30));
 					else if (instruc < 10)
 						writer.println("Y=" + gerador.nextInt(30));
 					else if (instruc < 15)
 						writer.println("COM");
 					else
-						writer.println("E/S");					
+						writer.println("E/S");
 				}
 				writer.print("SAIDA");
 

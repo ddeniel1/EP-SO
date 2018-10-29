@@ -17,45 +17,38 @@ public class Logger {
 	}
 
 	public static void carregaProcesso(String nomeProcesso) {
-		Logger.writer.println("Carregando "+ nomeProcesso);
+		Logger.writer.println("Carregando " + nomeProcesso);
 	}
 
+	// Cria arquivo de log de acordo com o quantum informado
 	public static void inicializaLog(int quantum) throws FileNotFoundException, UnsupportedEncodingException {
 		Logger.writer = new PrintWriter("log/log" + (quantum > 9 ? quantum : "0" + quantum) + ".txt", "UTF-8");
-		
-	}
 
+	}
 	public static void executando(String nomeProcesso) {
-		// TODO Auto-generated method stub
-		writer.println("Executando "+nomeProcesso);
+		writer.println("Executando " + nomeProcesso);
 	}
 
 	public static void ES(int i, String nomeProcesso) {
-		// TODO Auto-generated method stub
 		writer.println("E/S iniciada em " + nomeProcesso);
 		interrompendo(nomeProcesso, i);
 	}
 
-
-
 	public static void finalizarProcesso(String nomeProcesso, int i) {
-		// TODO Auto-generated method stub
-		writer.println(nomeProcesso + " terminado. X="+CPU.getX()+". Y="+CPU.getY());
+		writer.println(nomeProcesso + " terminado. X=" + CPU.getX() + ". Y=" + CPU.getY());
 	}
 
 	public static void interrompendo(String nomeProcesso, int i) {
-		// TODO Auto-generated method stub
 		if (i == 0)
-			writer.println("Interrompendo " + nomeProcesso + " apÃ³s 1 instruÃ§Ã£o");
+			writer.println("Interrompendo " + nomeProcesso + " após 1 instrução");
 		else
-			writer.println("Interrompendo " + nomeProcesso + " apÃ³s " + (i) + " instruÃ§Ãµes");
+			writer.println("Interrompendo " + nomeProcesso + " após " + (i) + " instruções");
 	}
 
 	public static void mediasQuantum(double mediaTrocas, double mediasInstrucoes, int quantum) {
-		// TODO Sua mÃ£e
 		writer.println("MEDIA DE TROCAS: " + mediaTrocas);
-		writer.println("MEDIA DE INSTRUCOES: " +  mediasInstrucoes);
-		writer.println("QUANTUM: "+ quantum);
+		writer.println("MEDIA DE INSTRUCOES: " + mediasInstrucoes);
+		writer.println("QUANTUM: " + quantum);
 		writer.close();
 	}
 }
