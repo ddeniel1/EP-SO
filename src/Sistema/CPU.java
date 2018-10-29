@@ -92,8 +92,6 @@ public class CPU {
 		}
 		SO.setIntrucoesTotais(SO.getIntrucoesTotais() + i);
 		quanta += quantaAtual;
-		System.out.println("quanta: " + quanta);
-		System.out.println("IT: " + SO.getIntrucoesTotais());
 		if (!flag) {
 			Logger.interrompendo(nomeProcesso, i);
 			Escalonador.retirar(executando);
