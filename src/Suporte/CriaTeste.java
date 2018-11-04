@@ -27,10 +27,10 @@ public class CriaTeste {
 	// Classe auxiliar para criacao de casos testes para fazer os graficos
 	public static void main(String[] args) throws IOException {
 		lerPastaProcessos("processos");
-		lerPastaProcessos("NovosProcessos");
+		//lerPastaProcessos("NovosProcessos");
 
-		criarTestes();
-		lerTestes("entradasTeste");
+		//criarTestes();
+		//lerTestes("entradasTeste");
 
 	}
 
@@ -54,7 +54,7 @@ public class CriaTeste {
 			Escalonador.carregarProcessos();
 			BCP executando = null;
 			executarProcessos(executando);
-			mediaTrocas = (double) trocaTotais / SO.getQntProcessos();
+			mediaTrocas = (double) (trocaTotais -1)/ SO.getQntProcessos();
 			mediaInstrucoes = (double) SO.getIntrucoesTotais() / CPU.getQuanta();
 			Logger.mediasQuantum(mediaTrocas, mediaInstrucoes, quantum);
 			quantuns.add(quantum);
@@ -76,7 +76,7 @@ public class CriaTeste {
 			ArrayList<Double> mediasT) throws IOException {
 		FileWriter writer = new FileWriter(nomeArquivo);
 
-		writer.append("Identificação");
+		writer.append("Identificaï¿½ï¿½o");
 		writer.append(',');
 		writer.append("QNT_Quantum");
 		writer.append(',');

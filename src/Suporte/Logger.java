@@ -40,13 +40,13 @@ public class Logger {
 
 	public static void interrompendo(String nomeProcesso, int i) {
 		if (i == 0)
-			writer.println("Interrompendo " + nomeProcesso + " após 1 instrução");
+			writer.println("Interrompendo " + nomeProcesso + " apÃ³s 1 instruÃ§Ãµes");
 		else
-			writer.println("Interrompendo " + nomeProcesso + " após " + (i) + " instruções");
+			writer.println("Interrompendo " + nomeProcesso + " apÃ³s " + (i) + " instruÃ§Ãµes");
 	}
 
 	public static void mediasQuantum(double mediaTrocas, double mediasInstrucoes, int quantum) {
-		writer.println("MEDIA DE TROCAS: " + mediaTrocas);
+		writer.println("MEDIA DE TROCAS: " + (mediaTrocas));
 		writer.println("MEDIA DE INSTRUCOES: " + mediasInstrucoes);
 		writer.println("QUANTUM: " + quantum);
 		writer.close();

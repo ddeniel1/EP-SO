@@ -7,5 +7,13 @@ E/S
 Y=10
 X=2
 COM
+COM
 E/S
+COM
+COM
+Y=10
+X=2
+COM
+X=3
+COM
 SAIDA

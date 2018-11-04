@@ -16,7 +16,7 @@ public class Despachante {
 		executando.setContadorDePrograma(CPU.getContadorDePrograma());
 		executando.setIntrucoes(CPU.getInstrucoes());
 		executando.setCreditos(executando.getCreditos()-1);
-		executando.setQuantum(executando.getQuantum()*2);
+		executando.setQuantum(executando.getQuantum()+1);
 	}
 
 	public static void inserirContexto(BCP executando) {

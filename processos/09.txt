@@ -13,4 +13,8 @@ COM
 COM
 COM
 E/S
+X=3
+Y=4
+COM
+COM
 SAIDA

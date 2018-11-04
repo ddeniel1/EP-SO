@@ -4,6 +4,8 @@ COM
 COM
 Y=5
 COM
+COM
+COM
 X=10
 X=12
 Y=3
