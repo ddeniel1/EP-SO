@@ -1,6 +1,0 @@
-TESTE-13
-X=12
-COM
-COM
-E/S
-SAIDA

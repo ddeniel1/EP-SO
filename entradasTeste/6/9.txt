@@ -1,6 +1,0 @@
-TESTE-9
-Y=21
-X=24
-COM
-Y=14
-SAIDA

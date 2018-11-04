@@ -1,15 +1,3 @@
 TESTE-2
-Y=29
-COM
-X=15
-E/S
-X=0
-Y=21
-Y=28
-E/S
-X=21
-X=19
-X=25
-X=15
 COM
 SAIDA

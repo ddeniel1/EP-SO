@@ -1,4 +1,0 @@
-TESTE-10
-X=0
-COM
-SAIDA

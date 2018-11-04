@@ -1,5 +1,0 @@
-TESTE-3
-Y=0
-COM
-X=17
-SAIDA

@@ -38,7 +38,7 @@ public class SO {
 			trocasTotais++;
 		}
 		// Defini a media de trocas e a media de instrucoes
-		double mediaTrocas = (double) trocasTotais / qntProcessos;
+		double mediaTrocas = (double) (trocasTotais-1) / qntProcessos;
 		double mediasInstrucoes = (double) instrucoesTotais / CPU.getQuanta();
 		// O logger termina o arquivo de log após essa chamada
 		Logger.mediasQuantum(mediaTrocas, mediasInstrucoes, quantum);

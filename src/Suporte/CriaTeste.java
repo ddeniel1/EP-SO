@@ -27,7 +27,7 @@ public class CriaTeste {
 	// Classe auxiliar para criacao de casos testes para fazer os graficos
 	public static void main(String[] args) throws IOException {
 		lerPastaProcessos("processos");
-		//lerPastaProcessos("NovosProcessos");
+		lerPastaProcessos("NovosProcessos");
 
 		//criarTestes();
 		//lerTestes("entradasTeste");
@@ -147,7 +147,7 @@ public class CriaTeste {
 			int processos = gerador.nextInt(15) + 1;
 			for (int j = 0; j < processos; j++) {
 
-				PrintWriter writer = new PrintWriter("entradasTeste/" + i + "/" + (j < 9 ? "0" + j : j) + ".txt",
+				PrintWriter writer = new PrintWriter("entradasTeste/" + i + "/" + (j < 10 ? "0" + j : j) + ".txt",
 						"UTF-8");
 				String s = "TESTE-" + j;
 				writer.println(s);
@@ -170,6 +170,9 @@ public class CriaTeste {
 				for (int k = 0; k < processos; k++) {
 					writer.println((int) Math.ceil(Math.random() * instrucoes));
 				}
+				writer.close();
+				writer = new PrintWriter("entradasTeste/" + i + "/quantum.txt", "UTF-8");
+				writer.println(10);
 				writer.close();
 			}
 		}

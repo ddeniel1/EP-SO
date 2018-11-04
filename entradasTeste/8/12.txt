@@ -1,7 +1,3 @@
 TESTE-12
-X=3
-X=17
-X=21
-E/S
-X=17
+COM
 SAIDA

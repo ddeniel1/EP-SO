@@ -1,12 +1,8 @@
 TESTE-8
-Y=8
-E/S
+X=0
 COM
-X=26
 E/S
-Y=15
-COM
-Y=19
 E/S
-COM
+X=29
+X=3
 SAIDA

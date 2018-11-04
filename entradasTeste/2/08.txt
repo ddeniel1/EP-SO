@@ -1,3 +1,5 @@
 TESTE-8
-Y=10
+Y=21
+X=25
+COM
 SAIDA

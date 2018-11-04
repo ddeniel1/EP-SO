@@ -1,4 +1,12 @@
 TESTE-0
+Y=19
+X=28
+X=8
+X=1
 E/S
-X=13
+COM
+COM
+E/S
+E/S
+COM
 SAIDA

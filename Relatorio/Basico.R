@@ -27,7 +27,11 @@ X9 <- read_csv("entradasTeste/9.csv")
 
 x <- ggplot(resumoProcessos)
 attach(resumoProcessos)
-x + geom_smooth(aes(x = QNT_Quantum, y = MediaIntrucoes, color = "blue")) + 
-  geom_smooth(aes(x = QNT_Quantum, y = MediaTrocas, color ="red")) + 
+x + geom_line(aes(x = QNT_Quantum, y = MediaIntrucoes, color = "Média de Instruções")) + 
+  geom_line(aes(x = QNT_Quantum, y = MediaTrocas, color ="Média de Trocas")) + 
   ggtitle("Tamanho do Quantum por Médias") + xlab("Tamanho do Quantum") + ylab("Médias")
-
+x <- ggplot(resumoNovosProcessos)
+attach(resumoNovosProcessos)
+x + geom_line(aes(x = QNT_Quantum, y = MediaIntrucoes, color = "Média de Instruções")) + 
+  geom_line(aes(x = QNT_Quantum, y = MediaTrocas, color ="Média de Trocas")) + 
+  ggtitle("Tamanho do Quantum por Médias") + xlab("Tamanho do Quantum") + ylab("Médias")

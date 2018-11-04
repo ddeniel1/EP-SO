@@ -1,4 +1,0 @@
-TESTE-9
-Y=23
-Y=3
-SAIDA

@@ -1,0 +1,6 @@
+TESTE-14
+Y=24
+X=8
+X=8
+Y=5
+SAIDA

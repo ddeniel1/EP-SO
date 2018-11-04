@@ -1,12 +1,4 @@
 TESTE-4
-Y=1
-X=29
-Y=29
-Y=8
-E/S
-E/S
-X=19
-Y=5
-Y=13
-E/S
+Y=10
+COM
 SAIDA

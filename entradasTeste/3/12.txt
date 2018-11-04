@@ -1,7 +1,0 @@
-TESTE-12
-COM
-E/S
-COM
-Y=4
-Y=1
-SAIDA

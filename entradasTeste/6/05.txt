@@ -1,4 +1,4 @@
 TESTE-5
-Y=22
-E/S
+Y=5
+Y=16
 SAIDA

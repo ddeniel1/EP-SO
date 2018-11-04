@@ -1,17 +1,3 @@
 TESTE-6
-E/S
-Y=9
-X=17
-E/S
-Y=13
-Y=8
 COM
-E/S
-E/S
-X=1
-Y=17
-E/S
-Y=10
-E/S
-X=16
 SAIDA

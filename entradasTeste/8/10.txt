@@ -1,5 +1,12 @@
 TESTE-10
 COM
-Y=11
-Y=6
+E/S
+Y=2
+X=8
+E/S
+COM
+COM
+E/S
+X=21
+X=3
 SAIDA

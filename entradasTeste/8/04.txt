@@ -1,3 +1,5 @@
 TESTE-4
-COM
+E/S
+Y=13
+E/S
 SAIDA

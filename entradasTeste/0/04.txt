@@ -1,13 +1,3 @@
 TESTE-4
-E/S
-Y=23
-E/S
-E/S
-E/S
-X=6
-Y=29
-X=25
-COM
-Y=29
-X=1
+Y=24
 SAIDA

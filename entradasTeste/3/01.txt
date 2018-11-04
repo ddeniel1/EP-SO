@@ -1,12 +1,4 @@
 TESTE-1
-Y=26
-Y=9
-Y=26
 E/S
-X=26
-X=0
-X=7
-COM
-COM
-Y=27
+Y=25
 SAIDA

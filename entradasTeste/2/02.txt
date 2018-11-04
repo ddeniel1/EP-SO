@@ -1,11 +1,3 @@
 TESTE-2
-E/S
-X=9
-COM
-Y=2
-COM
-X=18
-E/S
-X=26
-COM
+X=16
 SAIDA

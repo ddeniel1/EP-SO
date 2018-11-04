@@ -1,7 +1,0 @@
-TESTE-9
-X=9
-E/S
-COM
-Y=14
-COM
-SAIDA

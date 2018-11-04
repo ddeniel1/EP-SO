@@ -1,5 +1,6 @@
 TESTE-6
-E/S
+X=11
 E/S
 COM
+E/S
 SAIDA

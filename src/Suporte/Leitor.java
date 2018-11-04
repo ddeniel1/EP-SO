@@ -13,7 +13,7 @@ import Sistema.BCP;
 public class Leitor {
 
 	public static ArrayList<BCP> leiaPastaDeArquivos(String string) throws IOException {
-		File pasta = new File("processos");
+		File pasta = new File(string);
 		File[] arquivos = pasta.listFiles();
 		Arrays.sort(arquivos);
 		return lerProcessos(arquivos);
@@ -27,7 +27,6 @@ public class Leitor {
 		// Laco que coloca as prioridades dos processos
 		for (int i = 0; i < prioridades.length; i++) {
 			prioridades[i] = buff.readLine();
-			System.out.println(prioridades[i]);
 		}
 		// Quantum inicial do BCP
 		arq = new FileReader(arquivos[arquivos.length - 1]);

@@ -1,9 +1,0 @@
-TESTE-13
-E/S
-Y=3
-E/S
-COM
-Y=11
-E/S
-Y=25
-SAIDA

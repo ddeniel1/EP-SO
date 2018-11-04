@@ -1,4 +1,11 @@
 TESTE-5
-Y=7
+Y=6
 E/S
+Y=19
+Y=16
+Y=16
+X=0
+Y=21
+E/S
+Y=14
 SAIDA

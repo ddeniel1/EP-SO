@@ -1,11 +1,8 @@
 TESTE-1
-E/S
+Y=20
+X=23
+X=9
 COM
-E/S
-E/S
 COM
-X=19
-Y=2
-E/S
-E/S
+COM
 SAIDA

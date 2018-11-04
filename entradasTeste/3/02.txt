@@ -1,8 +1,6 @@
 TESTE-2
-Y=1
-Y=3
-X=21
-Y=23
 E/S
-Y=18
+COM
+COM
+X=5
 SAIDA
