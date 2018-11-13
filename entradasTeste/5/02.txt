@@ -1,0 +1,7 @@
+TESTE-2
+E/S
+COM
+Y=27
+E/S
+E/S
+SAIDA

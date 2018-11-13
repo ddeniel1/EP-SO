@@ -1,0 +1,7 @@
+TESTE-0
+COM
+Y=24
+Y=7
+COM
+COM
+SAIDA

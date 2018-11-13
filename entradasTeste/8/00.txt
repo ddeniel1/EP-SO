@@ -1,0 +1,4 @@
+TESTE-0
+E/S
+X=7
+SAIDA

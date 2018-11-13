@@ -1,0 +1,6 @@
+TESTE-4
+Y=4
+E/S
+X=11
+X=11
+SAIDA

@@ -1,0 +1,5 @@
+TESTE-3
+E/S
+Y=6
+X=5
+SAIDA

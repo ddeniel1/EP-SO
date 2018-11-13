@@ -1,0 +1,7 @@
+TESTE-8
+X=13
+COM
+Y=0
+E/S
+E/S
+SAIDA

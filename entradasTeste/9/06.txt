@@ -1,0 +1,6 @@
+TESTE-6
+X=11
+E/S
+COM
+E/S
+SAIDA

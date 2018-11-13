@@ -1,0 +1,11 @@
+TESTE-4
+COM
+COM
+COM
+Y=21
+E/S
+X=25
+E/S
+X=22
+Y=10
+SAIDA

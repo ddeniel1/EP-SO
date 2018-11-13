@@ -1,0 +1,101 @@
+Carregando TESTE-1
+Carregando TESTE-8
+Carregando TESTE-2
+Carregando TESTE-7
+Carregando TESTE-9
+Carregando TESTE-3
+Carregando TESTE-6
+Carregando TESTE-10
+Carregando TESTE-4
+Carregando TESTE-5
+Executando TESTE-1
+E/S iniciada em TESTE-1
+Interrompendo TESTE-1 após 6 instruções
+Executando TESTE-8
+Interrompendo TESTE-8 após 6 instruções
+Executando TESTE-8
+TESTE-8 terminado. X=9. Y=10
+Executando TESTE-1
+E/S iniciada em TESTE-1
+Interrompendo TESTE-1 após 5 instruções
+Executando TESTE-2
+Interrompendo TESTE-2 após 6 instruções
+Executando TESTE-7
+Interrompendo TESTE-7 após 6 instruções
+Executando TESTE-9
+E/S iniciada em TESTE-9
+Interrompendo TESTE-9 após 1 instruções
+Executando TESTE-1
+TESTE-1 terminado. X=10. Y=5
+Executando TESTE-2
+TESTE-2 terminado. X=3. Y=5
+Executando TESTE-7
+E/S iniciada em TESTE-7
+Interrompendo TESTE-7 após 9 instruções
+Executando TESTE-9
+E/S iniciada em TESTE-9
+Interrompendo TESTE-9 após 3 instruções
+Executando TESTE-3
+E/S iniciada em TESTE-3
+Interrompendo TESTE-3 após 1 instruções
+Executando TESTE-6
+E/S iniciada em TESTE-6
+Interrompendo TESTE-6 após 3 instruções
+Executando TESTE-10
+E/S iniciada em TESTE-10
+Interrompendo TESTE-10 após 6 instruções
+Executando TESTE-7
+TESTE-7 terminado. X=39. Y=4
+Executando TESTE-9
+E/S iniciada em TESTE-9
+Interrompendo TESTE-9 após 3 instruções
+Executando TESTE-3
+E/S iniciada em TESTE-3
+Interrompendo TESTE-3 após 7 instruções
+Executando TESTE-6
+TESTE-6 terminado. X=64. Y=283
+Executando TESTE-10
+E/S iniciada em TESTE-10
+Interrompendo TESTE-10 após 4 instruções
+Executando TESTE-4
+E/S iniciada em TESTE-4
+Interrompendo TESTE-4 após 2 instruções
+Executando TESTE-5
+Interrompendo TESTE-5 após 6 instruções
+Executando TESTE-9
+E/S iniciada em TESTE-9
+Interrompendo TESTE-9 após 3 instruções
+Executando TESTE-3
+E/S iniciada em TESTE-3
+Interrompendo TESTE-3 após 2 instruções
+Executando TESTE-10
+TESTE-10 terminado. X=1. Y=18
+Executando TESTE-9
+TESTE-9 terminado. X=98. Y=21
+Executando TESTE-3
+E/S iniciada em TESTE-3
+Interrompendo TESTE-3 após 4 instruções
+Executando TESTE-4
+E/S iniciada em TESTE-4
+Interrompendo TESTE-4 após 2 instruções
+Executando TESTE-5
+E/S iniciada em TESTE-5
+Interrompendo TESTE-5 após 2 instruções
+Executando TESTE-3
+TESTE-3 terminado. X=49. Y=5
+Executando TESTE-4
+E/S iniciada em TESTE-4
+Interrompendo TESTE-4 após 2 instruções
+Executando TESTE-5
+E/S iniciada em TESTE-5
+Interrompendo TESTE-5 após 5 instruções
+Executando TESTE-4
+TESTE-4 terminado. X=0. Y=0
+Executando TESTE-5
+E/S iniciada em TESTE-5
+Interrompendo TESTE-5 após 6 instruções
+Executando TESTE-5
+TESTE-5 terminado. X=2. Y=38
+MEDIA DE TROCAS: 3.3
+MEDIA DE INSTRUCOES: 2.98
+QUANTUM: 6

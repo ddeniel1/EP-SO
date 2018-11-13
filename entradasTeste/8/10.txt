@@ -1,0 +1,12 @@
+TESTE-10
+COM
+E/S
+Y=2
+X=8
+E/S
+COM
+COM
+E/S
+X=21
+X=3
+SAIDA

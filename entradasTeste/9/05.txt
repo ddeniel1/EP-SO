@@ -1,0 +1,9 @@
+TESTE-5
+E/S
+Y=28
+E/S
+Y=26
+X=0
+X=21
+COM
+SAIDA

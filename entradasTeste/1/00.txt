@@ -1,0 +1,12 @@
+TESTE-0
+Y=19
+X=28
+X=8
+X=1
+E/S
+COM
+COM
+E/S
+E/S
+COM
+SAIDA

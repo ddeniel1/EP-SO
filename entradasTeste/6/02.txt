@@ -1,0 +1,7 @@
+TESTE-2
+X=1
+COM
+Y=4
+X=14
+E/S
+SAIDA

@@ -1,0 +1,4 @@
+TESTE-8
+E/S
+X=29
+SAIDA

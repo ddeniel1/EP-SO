@@ -1,0 +1,7 @@
+TESTE-6
+X=24
+E/S
+Y=28
+X=20
+Y=3
+SAIDA

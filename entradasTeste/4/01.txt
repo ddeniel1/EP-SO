@@ -1,0 +1,8 @@
+TESTE-1
+E/S
+Y=27
+Y=26
+E/S
+Y=19
+X=19
+SAIDA

@@ -1,0 +1,8 @@
+TESTE-1
+Y=20
+X=23
+X=9
+COM
+COM
+COM
+SAIDA
